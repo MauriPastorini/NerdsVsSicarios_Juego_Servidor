@@ -1,6 +1,6 @@
 var Usuario = require("./../models/usuario");
 var jwt = require("jsonwebtoken");
-var llaves = require("../config/keys.json");
+var llaves = require("../config/llaves.json");
 
 exports.crearUsuario = (req, res) => {
   console.log(req.body);

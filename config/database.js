@@ -1,4 +1,4 @@
-const host = 'mongodb://localhost:27017/';
+const host = 'mongodb://base-de-datos:27018/';
 const dbName = 'nerdsvssicarios';
 
 module.exports = {

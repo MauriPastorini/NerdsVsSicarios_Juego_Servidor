@@ -6,7 +6,6 @@ services:
     build: .
     ports:
       - '8081:8081'
-    restart: always
     healthcheck:
       test: exit 0
     links:
@@ -17,5 +16,6 @@ services:
     container_name: base-de-datos
     image: mongo
     restart: always
+    command: mongod --port 27018
     ports:
-      - "27017:27017"
+        - '27018:27018'
