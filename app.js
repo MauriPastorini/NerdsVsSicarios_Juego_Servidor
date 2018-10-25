@@ -46,8 +46,8 @@ app.use(function(err, req, res, next) {
   return res.status(err.status || 500).send();
 });
 
-app.listen(process.env.PORT || 8080, function() {
-  console.log("Now listening for request in " + (process.env.PORT || 8080));
+app.listen(8081, function() {
+  console.log("Now listening for request in " + (8081));
 });
 
 module.exports = app;
