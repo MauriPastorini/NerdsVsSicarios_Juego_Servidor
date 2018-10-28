@@ -5,7 +5,7 @@ services:
     container_name: nerds-vs-sicarios
     build: .
     ports:
-      - '8081:8081'
+      - '8090:8090'
     restart: always
     healthcheck:
       test: exit 0

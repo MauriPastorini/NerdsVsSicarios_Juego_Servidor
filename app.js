@@ -49,7 +49,8 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(process.env.PORT || 8090, function() {
-  console.log("Now listening for request in " + (8081));
+  console.log(process.env.PORT);
+  console.log("Now listening for request in " + (process.env.PORT || 8090));
 });
 
 module.exports = app;
