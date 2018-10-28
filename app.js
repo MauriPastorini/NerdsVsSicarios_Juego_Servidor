@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 var express = require("express");
 var logger = require("morgan");
 var bodyParser = require("body-parser");
@@ -46,7 +48,7 @@ app.use(function(err, req, res, next) {
   return res.status(err.status || 500).send();
 });
 
-app.listen(8081, function() {
+app.listen(process.env.PORT || 8090, function() {
   console.log("Now listening for request in " + (8081));
 });
 
