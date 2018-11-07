@@ -3,7 +3,7 @@ var jwt = require("jsonwebtoken");
 var llaves = require("../config/llaves.json");
 
 exports.crearUsuario = (req, res) => {
-  console.log(req.body);
+  console.log("CREAR USUARIO: ", req.body);
   const usuario = new Usuario(req.body);
   usuario.save((err, data) => {
     if (err) {
