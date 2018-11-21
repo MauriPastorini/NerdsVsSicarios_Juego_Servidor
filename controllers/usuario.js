@@ -67,11 +67,7 @@ exports.iniciarSesion = async (req, res) => {
           var token = jwt.sign({ usuario }, llaves.secreto, {
             expiresIn: 86400
           });
-          return res.status(200).jsonp({
-            exito: true,
-            msg: "Exito al loguearse",
-            token
-          });
+          return res.status(200).send(token);
         }
       }
     );
