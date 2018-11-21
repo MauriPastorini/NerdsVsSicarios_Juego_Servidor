@@ -11,13 +11,13 @@ var cors = require('cors');
 var apiV1Router = require("./routes/v1");
 var dbConfig = require('./config/database');
 
-
+console.log(dbConfig.connection_string)
 mongoose.connect(dbConfig.connection_string, { useNewUrlParser: true })
   .then(() => {
     console.log("Connected to mongodb");
   })
   .catch((err) => {
-    console.log("ERROR: Could not connect to mongodb")
+    console.log("ERROR: Could not connect to mongodb: ", err)
   });
 
 app.use(logger("dev")); // Logger configuration

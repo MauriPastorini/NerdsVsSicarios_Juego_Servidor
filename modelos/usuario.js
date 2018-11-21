@@ -1,26 +1,23 @@
 var mongoose = require("mongoose"),
   Schema = mongoose.Schema;
-
+var jwt = require("jsonwebtoken");
+var llaves = require("../config/llaves.json")
 const bcrypt = require("bcrypt-nodejs");
-
 
 var UsuarioSchema = new Schema({
   nombreusuario: { type: String, required: true, index: { unique: true } },
   contrasenia: { type: String },
+  puntos: { type: Number },
   cartas: [
     {
+      _id: { type: String, required: true },
+      tipo: { type: String, require: true },
+      nombre: { type: String, required: true },
       velocidad: { type: String, required: true },
       danio: { type: Number, require: true },
-      costo: { type: Number },
-      nivel: { type: Number },
-      tipo: {
-        jugador: {
-          type: String
-        },
-        nombre: {
-          type: String
-        }
-      }
+      costoParaDesbloquear: { type: Number, required: true },
+      nivel: { type: Number,require: true, default: 0 },
+      aprendida: { type: Boolean, require: true, default: false },
     }
   ]
 });
@@ -49,6 +46,12 @@ UsuarioSchema.statics.compararContrasenia = function(
       return cb(null, esMatch);
     }
   });
+};
+
+UsuarioSchema.statics.verificarToken = async token => {
+  console.log(token);
+  var decodeado = await jwt.verify(token, llaves.secreto);
+  return decodeado;
 };
 
 module.exports = mongoose.model("Usuario", UsuarioSchema);

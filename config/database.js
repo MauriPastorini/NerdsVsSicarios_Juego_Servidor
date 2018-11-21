@@ -1,4 +1,4 @@
-const host = 'mongodb://base-de-datos:27018/';
+const host = process.env.DBHOST || 'mongodb://base-de-datos:27018/';
 const dbName = 'nerdsvssicarios';
 
 module.exports = {
