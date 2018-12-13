@@ -6,7 +6,6 @@ var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var app = express();
 var async = require("async");
-var cors = require('cors');
 
 var apiV1Router = require("./routes/v1");
 var dbConfig = require('./config/database');

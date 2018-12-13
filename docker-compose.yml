@@ -1,11 +1,12 @@
 version: "3"
 
 services:
-  nerds-vs-sicarios:
-    container_name: nerds-vs-sicarios
+  mainserver:
+    command: npm run start
+    container_name: mainserver
     build: .
     ports:
-      - '8090:8090'
+      - "8096:8096"
     restart: always
     healthcheck:
       test: exit 0
