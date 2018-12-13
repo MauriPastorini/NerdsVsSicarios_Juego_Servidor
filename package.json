@@ -2,6 +2,9 @@
   "name": "nerds-vs-sicarios",
   "version": "5.1.1",
   "private": true,
+  "description": "Server for united coin",
+  "author": "Mauricio Pastorini",
+  "license": "MIT",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
