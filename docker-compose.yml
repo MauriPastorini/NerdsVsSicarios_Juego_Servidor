@@ -6,7 +6,7 @@ services:
     container_name: mainserver
     build: .
     ports:
-      - "8096:8096"
+      - "8090:8090"
     restart: always
     healthcheck:
       test: exit 0
