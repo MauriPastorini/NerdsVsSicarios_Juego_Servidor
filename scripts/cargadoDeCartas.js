@@ -2,6 +2,7 @@ var cartas = [
   {
     tipo: "nerd-weabooLord",
     nombre: "dakimakura",
+    nombre_completo: "Dakimakura",
     danio: 20,
     costoParaDesbloquear: 0,
     velocidad: 10
@@ -9,6 +10,7 @@ var cartas = [
   {
     tipo: "nerd-weabooLord",
     nombre: "mochila_pegajosa",
+    nombre_completo: "Mochila pegajosa",
     danio: 20,
     costoParaDesbloquear: 0,
     velocidad: 10
@@ -16,32 +18,123 @@ var cartas = [
   {
     tipo: "nerd-weabooLord",
     nombre: "catapulta",
+    nombre_completo: "Catapulta",
     danio: 20,
     costoParaDesbloquear: 5,
     velocidad: 10
   },
   {
     tipo: "sicario-jugadorfootball",
-    nombre: "jugador_football",
+    nombre: "jugador_football_base",
+    nombre_completo: "Jugador de Football Base",
     danio: 20,
     costoParaDesbloquear: 0,
     velocidad: 10
   },
   {
-    tipo: "sicario-punk",
-    nombre: "punk_girl",
+    tipo: "sicario-jugadorfootball",
+    nombre: "jugador_football_medio",
+    nombre_completo: "Jugador de Football Medio",
+    danio: 20,
+    costoParaDesbloquear: 0,
+    velocidad: 10
+  },
+  {
+    tipo: "sicario-jugadorfootball",
+    nombre: "jugador_football_estrella",
+    nombre_completo: "Jugador de Football Estrella",
+    danio: 20,
+    costoParaDesbloquear: 0,
+    velocidad: 10
+  },
+  {
+    tipo: "sicario-bailarin",
+    nombre: "bailarin_base",
+    nombre_completo: "Bailarín Base",
+    danio: 20,
+    costoParaDesbloquear: 5,
+    velocidad: 10
+  },
+  {
+    tipo: "sicario-bailarin",
+    nombre: "bailarin_medio",
+    nombre_completo: "Bailarín Medio",
+    danio: 20,
+    costoParaDesbloquear: 5,
+    velocidad: 10
+  },
+  {
+    tipo: "sicario-bailarin",
+    nombre: "bailarin_estrella",
+    nombre_completo: "Bailarín Estrella",
+    danio: 20,
+    costoParaDesbloquear: 5,
+    velocidad: 10
+  },
+  {
+    tipo: "sicario-punk-girl",
+    nombre: "punk_girl_base",
+    nombre_completo: "Punk Girl Base",
     danio: 20,
     costoParaDesbloquear: 2,
     velocidad: 10
   },
   {
-    tipo: "sicario-punk",
-    nombre: "bailarin",
+    tipo: "sicario-punk-girl",
+    nombre: "punk_girl_media",
+    nombre_completo: "Punk Girl Media",
     danio: 20,
-    costoParaDesbloquear: 5,
+    costoParaDesbloquear: 2,
     velocidad: 10
   },
-
+  {
+    tipo: "sicario-punk-girl",
+    nombre: "punk_girl_estrella",
+    nombre_completo: "Punk Girl Estrella",
+    danio: 20,
+    costoParaDesbloquear: 2,
+    velocidad: 10
+  },
+  {
+    tipo: "nerd-it-guy",
+    nombre: "Drone_2_Idle",
+    nombre_completo: "Drone 2.0 Idle",
+    danio: 20,
+    costoParaDesbloquear: 2,
+    velocidad: 10
+  },
+  {
+    tipo: "nerd-it-guy",
+    nombre: "drone_idle",
+    nombre_completo: "Drone Idle",
+    danio: 20,
+    costoParaDesbloquear: 2,
+    velocidad: 10
+  },
+  {
+    tipo: "nerd-punk-girl",
+    nombre: "mochila_cierra",
+    nombre_completo: "Mochila cierra",
+    danio: 20,
+    costoParaDesbloquear: 2,
+    velocidad: 10
+  },
+  {
+    tipo: "nerd-punk-girl",
+    nombre: "mochila_honda",
+    nombre_completo: "Mochila Honda",
+    danio: 20,
+    costoParaDesbloquear: 2,
+    velocidad: 10
+  },
+  {
+    tipo: "nerd-punk-girl",
+    nombre: "mochila_mina",
+    nombre_completo: "Mochila Mina",
+    danio: 20,
+    costoParaDesbloquear: 2,
+    velocidad: 10
+  },
 ];
 const dbConfig = require("../config/database");
 
