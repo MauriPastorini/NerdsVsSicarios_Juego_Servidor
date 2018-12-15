@@ -18,6 +18,7 @@ var UsuarioSchema = new Schema({
       danio: { type: Number, require: true },
       costo_para_desbloquear: { type: Number, required: true },
       nivel: { type: Number,require: true, default: 1 },
+      limite_nivel: { type: Number,require: true },
       aprendida: { type: Boolean, require: true, default: false },
     }
   ]

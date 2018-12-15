@@ -7,7 +7,8 @@ var cartas = [
     nombre_completo: "Dakimakura",
     danio: 20,
     costo_para_desbloquear: 0,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "nerd-weabooLord",
@@ -15,7 +16,8 @@ var cartas = [
     nombre_completo: "Mochila pegajosa",
     danio: 20,
     costo_para_desbloquear: 0,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "nerd-weabooLord",
@@ -23,7 +25,8 @@ var cartas = [
     nombre_completo: "Catapulta",
     danio: 20,
     costo_para_desbloquear: 5,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "sicario-jugadorfootball",
@@ -31,7 +34,8 @@ var cartas = [
     nombre_completo: "Jugador de Football Base",
     danio: 20,
     costo_para_desbloquear: 0,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "sicario-jugadorfootball",
@@ -39,7 +43,8 @@ var cartas = [
     nombre_completo: "Jugador de Football Medio",
     danio: 20,
     costo_para_desbloquear: 0,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "sicario-jugadorfootball",
@@ -47,7 +52,8 @@ var cartas = [
     nombre_completo: "Jugador de Football Estrella",
     danio: 20,
     costo_para_desbloquear: 0,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "sicario-bailarin",
@@ -55,7 +61,8 @@ var cartas = [
     nombre_completo: "Bailarín Base",
     danio: 20,
     costo_para_desbloquear: 5,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "sicario-bailarin",
@@ -63,7 +70,8 @@ var cartas = [
     nombre_completo: "Bailarín Medio",
     danio: 20,
     costo_para_desbloquear: 5,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "sicario-bailarin",
@@ -71,7 +79,8 @@ var cartas = [
     nombre_completo: "Bailarín Estrella",
     danio: 20,
     costo_para_desbloquear: 5,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "sicario-punk-girl",
@@ -79,7 +88,8 @@ var cartas = [
     nombre_completo: "Punk Girl Base",
     danio: 20,
     costo_para_desbloquear: 2,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "sicario-punk-girl",
@@ -87,7 +97,8 @@ var cartas = [
     nombre_completo: "Punk Girl Media",
     danio: 20,
     costo_para_desbloquear: 2,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "sicario-punk-girl",
@@ -95,7 +106,8 @@ var cartas = [
     nombre_completo: "Punk Girl Estrella",
     danio: 20,
     costo_para_desbloquear: 2,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "nerd-it-guy",
@@ -103,7 +115,8 @@ var cartas = [
     nombre_completo: "Drone 2.0 Idle",
     danio: 20,
     costo_para_desbloquear: 2,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "nerd-it-guy",
@@ -111,7 +124,8 @@ var cartas = [
     nombre_completo: "Drone Idle",
     danio: 20,
     costo_para_desbloquear: 2,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "nerd-punk-girl",
@@ -119,7 +133,8 @@ var cartas = [
     nombre_completo: "Mochila cierra",
     danio: 20,
     costo_para_desbloquear: 2,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "nerd-punk-girl",
@@ -127,7 +142,8 @@ var cartas = [
     nombre_completo: "Mochila Honda",
     danio: 20,
     costo_para_desbloquear: 2,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
   {
     tipo: "nerd-punk-girl",
@@ -135,7 +151,8 @@ var cartas = [
     nombre_completo: "Mochila Mina",
     danio: 20,
     costo_para_desbloquear: 2,
-    velocidad: 10
+    velocidad: 10,
+    limite_nivel: 3
   },
 ];
 const dbConfig = require("../config/database");

@@ -75,21 +75,7 @@ exports.iniciarSesion = async (req, res) => {
 };
 
 exports.obtenerCartasDeJugador = async (req, res) => {
-  var id = req.usuario._id;
-  try {
-    var usuario = await Usuario.findById(id);
-  } catch (err) {
-    console.log("Error obteniendo usuario: ", err);
-    return res.status(500).jsonp({ exito: false, msg: "Error en el servidor" });
-  }
-  console.log("Id de token: ", id);
-  console.log("Usuario: ", usuario);
-  if (id != usuario._id) {
-    return res.status(403).jsonp({
-      exito: false,
-      msg: "Intentando obtener cartas de otro jugador"
-    });
-  }
+  const usuario = req.usuario;
   var cartasJugador = usuario.cartas;
   console.log("Cartas jugador: ", cartasJugador);
   try {
@@ -118,4 +104,48 @@ exports.subirNivelUsuario = async (req, res) => {
     return res.status(500).jsonp({ exito: false });
   }
   return res.status(200).jsonp({ exito: true, usuario });
+};
+
+exports.subirNivelCartaDeUsuario = async (req, res, next) => {
+  const carta = req.params.cartaId;
+  const usuario = req.usuario;
+  if (carta == null) {
+    return res.status(400).jsonp({
+      success: false,
+      msg: "Carta no enviada"
+    });
+  }
+
+  var encontrada = false;
+  for (let i = 0; i < usuario.cartas.length && !encontrada; i++) {
+    const cartaI = usuario.cartas[i];
+    if (cartaI._id === carta) {
+      console.log("CARTA: ", cartaI);
+      if (cartaI.nivel + 1 <= cartaI.limite_nivel) {
+        cartaI.nivel++;
+        try {
+          await usuario.save();
+        } catch (err) {
+          console.log("Error en seridor: ", err);
+          return next(err);
+        }
+        encontrada = true;
+      } else {
+        return res.status(400).jsonp({
+          success: false,
+          msg: "No se puede subir mas de nivel la carta"
+        })
+      }
+    }
+  }
+  if (!encontrada) {
+    return res.status(404).jsonp({
+      success: false,
+      msg: "Carta no encontrada"
+    });
+  }
+  return res.status(200).jsonp({
+    success: true,
+    usuario
+  });
 };

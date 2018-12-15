@@ -8,6 +8,7 @@ var CartaTipo = new Schema({
   velocidad: { type: Number },
   danio: { type: String },
   costo_para_desbloquear: { type: Number, required: true },
+  limite_nivel: { type: Number, required: true },
 });
 
 module.exports = mongoose.model("CartaTipo", CartaTipo);
