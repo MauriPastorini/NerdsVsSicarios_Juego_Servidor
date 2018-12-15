@@ -4,9 +4,10 @@ var mongoose = require("mongoose"),
 var CartaTipo = new Schema({
   tipo: { type: String, require: true },
   nombre: { type: String, required: true, index: { unique: true } },
+  nombre_completo: { type: String, required: true, index: { unique: true } },
   velocidad: { type: Number },
   danio: { type: String },
-  costoParaDesbloquear: { type: Number, required: true },
+  costo_para_desbloquear: { type: Number, required: true },
 });
 
 module.exports = mongoose.model("CartaTipo", CartaTipo);

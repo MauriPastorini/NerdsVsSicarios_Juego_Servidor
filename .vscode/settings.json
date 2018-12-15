@@ -1,0 +1,21 @@
+{
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/logs": true
+    },
+    "logFileHighlighter.customPatterns": [
+        {
+            "pattern": "info",
+            "foreground": "green"
+        },
+        {
+            "pattern": "POST /api/charge/\\w+",
+            "foreground": "red"
+        },
+        {
+            "pattern": "Debug:[\\w\\s]+",
+            "foreground": "yellow"
+        }
+    ]
+}

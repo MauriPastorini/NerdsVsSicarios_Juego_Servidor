@@ -107,3 +107,38 @@ exports.obtenerCartasDeJugador = async (req, res) => {
   }
   return res.status(200).jsonp({ exito: true, cartas: usuario.cartas });
 };
+
+exports.subirNivelUsuario = async (req, res) => {
+  var id = req.usuario._id;
+  try {
+    var usuario = await Usuario.findById(id);
+  } catch (err) {
+    console.log("Error obteniendo usuario: ", err);
+    return res.status(500).jsonp({ exito: false, msg: "Error en el servidor" });
+  }
+  console.log("Id de token: ", id);
+  console.log("Usuario: ", usuario);
+  
+  if (id != usuario._id) {
+    return res.status(403).jsonp({
+      exito: false,
+      msg: "Intentando obtener cartas de otro jugador"
+    });
+  }
+  var cartasJugador = usuario.cartas;
+  console.log("Cartas jugador: ", cartasJugador);
+  try {
+    var ids = [];
+    cartasJugador.forEach(element => {
+      ids.push(element._id);
+    });
+    var cartasDB = await CartaTipo.find({ _id: { $nin: ids } });
+    console.log("Cartas DB: ", cartasDB);
+    usuario.cartas = [...cartasJugador, ...cartasDB];
+    await usuario.save();
+  } catch (err) {
+    console.log("Error buscando cartas o guardando: ", err);
+    return res.status(500).jsonp({ exito: false });
+  }
+  return res.status(200).jsonp({ exito: true, cartas: usuario.cartas });
+};

@@ -8,6 +8,7 @@ var UsuarioSchema = new Schema({
   nombreusuario: { type: String, required: true, index: { unique: true } },
   contrasenia: { type: String },
   puntos: { type: Number },
+  nivel: { type: Number, default: 1 },
   cartas: [
     {
       _id: { type: String, required: true },
@@ -15,8 +16,8 @@ var UsuarioSchema = new Schema({
       nombre: { type: String, required: true },
       velocidad: { type: String, required: true },
       danio: { type: Number, require: true },
-      costoParaDesbloquear: { type: Number, required: true },
-      nivel: { type: Number,require: true, default: 0 },
+      costo_para_desbloquear: { type: Number, required: true },
+      nivel: { type: Number,require: true, default: 1 },
       aprendida: { type: Boolean, require: true, default: false },
     }
   ]

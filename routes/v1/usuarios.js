@@ -5,9 +5,9 @@ const usuariosControlador = require('./../../controllers/usuario')
 const autenticacionControlador = require('../../controllers/autenticacion');
 
 router.post('/', usuariosControlador.crearUsuario)
-      .get('/:id/carta', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.obtenerCartasDeJugador)
+      .get('/:userId/carta', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.obtenerCartasDeJugador)
       .post('/auth', usuariosControlador.iniciarSesion)
-      .post('/:id/tipojugador', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.setearNerdOSicario);
+      .post('/:userId/tipojugador', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.setearNerdOSicario);
 
 
 module.exports = router;
