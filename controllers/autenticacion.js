@@ -36,7 +36,7 @@ exports.verificarTokenEInsertarUsuario = async (req, res, next) => {
     return res.status(404).jsonp({ success: false, msg: "Usuario no existe" });
   }
   console.log("Req path: ", req.path);
-  if (req.params.userId != null) {
+  if (req.params.userId != null && false) {
     var usuarioPath;
     try {
       usuarioPath = await Usuario.findById(req.params.userId);
