@@ -7,7 +7,8 @@ const autenticacionControlador = require('../../controllers/autenticacion');
 router.post('/', usuariosControlador.crearUsuario)
       .get('/:userId/carta', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.obtenerCartasDeJugador)
       .post('/auth', usuariosControlador.iniciarSesion)
-      .post('/:userId/tipojugador', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.setearNerdOSicario);
+      .post('/:userId/tipojugador', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.setearNerdOSicario)
+      .post('/:userId/nivel', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.subirNivelUsuario);
 
 
 module.exports = router;

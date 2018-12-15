@@ -61,7 +61,7 @@ exports.verificarTokenEInsertarUsuario = async (req, res, next) => {
     }
   }
   console.log("Decodeado");
-  req.usuario = usuarioDecodeado.usuario;
+  req.usuario = usuario;
   console.log("Usuario guardado: ", req.usuario);
   next();
 };
