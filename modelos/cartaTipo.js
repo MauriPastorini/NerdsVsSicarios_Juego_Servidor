@@ -3,7 +3,7 @@ var mongoose = require("mongoose"),
 
 var CartaTipo = new Schema({
   tipo: { type: String, require: true },
-  nombre: { type: String, required: true, index: { unique: true } },
+  nombre: { type: String, required: true },
   nombre_completo: { type: String, required: true },
   velocidad: { type: Number },
   danio: { type: String },

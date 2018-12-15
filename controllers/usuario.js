@@ -9,6 +9,7 @@ exports.crearUsuario = (req, res) => {
   usuario.save((err, data) => {
     if (err) {
       console.log(err);
+      console.log("Error: ", err);
       if ((err.code != null) & (err.code == 11000)) {
         return res.status(400).json({ exito: false, msg: "Usuario ya existe" });
       } else {

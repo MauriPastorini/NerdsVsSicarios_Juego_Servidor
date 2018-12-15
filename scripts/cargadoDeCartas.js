@@ -8,7 +8,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 0,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "nerd-weabooLord",
@@ -17,7 +17,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 0,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "nerd-weabooLord",
@@ -26,7 +26,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 5,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "sicario-jugadorfootball",
@@ -35,7 +35,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 0,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "sicario-jugadorfootball",
@@ -44,7 +44,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 0,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "sicario-jugadorfootball",
@@ -53,7 +53,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 0,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "sicario-bailarin",
@@ -62,7 +62,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 5,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "sicario-bailarin",
@@ -71,7 +71,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 5,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "sicario-bailarin",
@@ -80,7 +80,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 5,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "sicario-punk-girl",
@@ -89,7 +89,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 2,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "sicario-punk-girl",
@@ -98,7 +98,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 2,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "sicario-punk-girl",
@@ -107,7 +107,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 2,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "nerd-it-guy",
@@ -116,7 +116,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 2,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "nerd-it-guy",
@@ -125,7 +125,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 2,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "nerd-punk-girl",
@@ -134,7 +134,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 2,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "nerd-punk-girl",
@@ -143,7 +143,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 2,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
   {
     tipo: "nerd-punk-girl",
@@ -152,7 +152,7 @@ var cartas = [
     danio: 20,
     costo_para_desbloquear: 2,
     velocidad: 10,
-    limite_nivel: 3
+    limite_nivel: 5
   },
 ];
 const dbConfig = require("../config/database");
