@@ -13,7 +13,8 @@ var UsuarioSchema = new Schema({
     {
       _id: { type: String, required: true },
       tipo: { type: String, require: true },
-      nombre: { type: String, required: true },
+      nombre: { type: String, required: true, index: { unique: true } },
+      nombre_completo: { type: String, required: true },
       velocidad: { type: String, required: true },
       danio: { type: Number, require: true },
       costo_para_desbloquear: { type: Number, required: true },
