@@ -10,7 +10,8 @@ router.post('/', usuariosControlador.crearUsuario)
       .post('/auth', usuariosControlador.iniciarSesion)
       .post('/:userId/tipojugador', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.setearNerdOSicario)
       .post('/:userId/nivel', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.subirNivelUsuario)
-      .post('/:userId/carta/:cartaId', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.subirNivelCartaDeUsuario);
+      .post('/:userId/carta/:cartaId', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.subirNivelCartaDeUsuario)
+      .post('/:userId/puntos', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.cambiarPuntos);
 
 
 module.exports = router;

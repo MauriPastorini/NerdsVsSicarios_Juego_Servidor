@@ -122,20 +122,27 @@ exports.subirNivelCartaDeUsuario = async (req, res, next) => {
     const cartaI = usuario.cartas[i];
     if (cartaI._id === carta) {
       console.log("CARTA: ", cartaI);
-      if (cartaI.nivel + 1 <= cartaI.limite_nivel) {
-        cartaI.nivel++;
-        try {
-          await usuario.save();
-        } catch (err) {
-          console.log("Error en seridor: ", err);
-          return next(err);
+      if (usuario.puntos - cartaI.costo_para_desbloquear >= 0) {
+        if (cartaI.nivel + 1 <= cartaI.limite_nivel) {
+          cartaI.nivel++;
+          try {
+            await usuario.save();
+          } catch (err) {
+            console.log("Error en seridor: ", err);
+            return next(err);
+          }
+          encontrada = true;
+        } else {
+          return res.status(400).jsonp({
+            success: false,
+            msg: "No se puede subir mas de nivel la carta"
+          });
         }
-        encontrada = true;
       } else {
         return res.status(400).jsonp({
-          success: false,
-          msg: "No se puede subir mas de nivel la carta"
-        })
+          success: false, 
+          msg: "Insuficientes puntos para desbloquear"
+        });
       }
     }
   }
@@ -153,4 +160,29 @@ exports.subirNivelCartaDeUsuario = async (req, res, next) => {
 
 exports.obtenerInformacionUsuario = async (req, res, next) => {
   return res.status(200).jsonp(req.usuario);
-}
+};
+
+exports.cambiarPuntos = async (req, res, next) => {
+  var puntos = req.body.puntos;
+  if (puntos == null) {
+    return res.status(400).jsonp({
+      success: false,
+      msg: "No se setearon los puntos"
+    });
+  }
+  if (req.usuario.puntos + puntos >= 0) {
+    req.usuario.puntos += puntos;
+    try {
+      await req.usuario.save();
+    } catch (err) {
+      console.log("Error guardando puntos en base de datos: ", err);
+      return next(err);
+    }
+    res.status(200).jsonp({ usuario: req.usuario });
+  } else {
+    res.status(400).jsonp({
+      success: false,
+      msg: "Insuficientes puntos para el cambio"
+    });
+  }
+};

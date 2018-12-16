@@ -7,7 +7,7 @@ const bcrypt = require("bcrypt-nodejs");
 var UsuarioSchema = new Schema({
   nombreusuario: { type: String, required: true, unique: true },
   contrasenia: { type: String },
-  puntos: { type: Number },
+  puntos: { type: Number , default: 0},
   nivel: { type: Number, default: 1 },
   cartas: [
     {
