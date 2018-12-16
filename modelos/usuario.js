@@ -5,7 +5,7 @@ var llaves = require("../config/llaves.json")
 const bcrypt = require("bcrypt-nodejs");
 
 var UsuarioSchema = new Schema({
-  nombreusuario: { type: String, required: true },
+  nombreusuario: { type: String, required: true, unique: true },
   contrasenia: { type: String },
   puntos: { type: Number },
   nivel: { type: Number, default: 1 },
