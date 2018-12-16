@@ -150,3 +150,7 @@ exports.subirNivelCartaDeUsuario = async (req, res, next) => {
     usuario
   });
 };
+
+exports.obtenerInformacionUsuario = async (req, res, next) => {
+  return res.status(200).jsonp(req.usuario);
+}

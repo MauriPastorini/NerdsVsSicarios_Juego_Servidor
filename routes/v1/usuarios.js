@@ -5,6 +5,7 @@ const usuariosControlador = require('./../../controllers/usuario')
 const autenticacionControlador = require('../../controllers/autenticacion');
 
 router.post('/', usuariosControlador.crearUsuario)
+      .get('/:userId', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.obtenerInformacionUsuario)
       .get('/:userId/carta', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.obtenerCartasDeJugador)
       .post('/auth', usuariosControlador.iniciarSesion)
       .post('/:userId/tipojugador', autenticacionControlador.verificarTokenEInsertarUsuario, usuariosControlador.setearNerdOSicario)
