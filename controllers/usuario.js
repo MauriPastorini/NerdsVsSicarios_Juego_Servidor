@@ -125,6 +125,8 @@ exports.subirNivelCartaDeUsuario = async (req, res, next) => {
       if (usuario.puntos - cartaI.costo_para_desbloquear >= 0) {
         if (cartaI.nivel + 1 <= cartaI.limite_nivel) {
           cartaI.nivel++;
+          usuario.puntos -= cartaI.costo_para_desbloquear;
+          cartaI.aprendida = true;
           try {
             await usuario.save();
           } catch (err) {
