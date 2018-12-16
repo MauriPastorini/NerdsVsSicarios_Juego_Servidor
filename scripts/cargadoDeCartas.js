@@ -6,7 +6,7 @@ var cartas = [
     nombre: "dakimakura",
     nombre_completo: "Dakimakura",
     danio: 20,
-    costo_para_desbloquear: 0,
+    costo_para_desbloquear: 5,
     velocidad: 10,
     limite_nivel: 5
   },
@@ -15,7 +15,7 @@ var cartas = [
     nombre: "mochila_pegajosa",
     nombre_completo: "Mochila pegajosa",
     danio: 20,
-    costo_para_desbloquear: 0,
+    costo_para_desbloquear: 5,
     velocidad: 10,
     limite_nivel: 5
   },
@@ -33,7 +33,7 @@ var cartas = [
     nombre: "jugador_football_base",
     nombre_completo: "Jugador de Football Base",
     danio: 20,
-    costo_para_desbloquear: 0,
+    costo_para_desbloquear: 5,
     velocidad: 10,
     limite_nivel: 5
   },
@@ -42,7 +42,7 @@ var cartas = [
     nombre: "jugador_football_medio",
     nombre_completo: "Jugador de Football Medio",
     danio: 20,
-    costo_para_desbloquear: 0,
+    costo_para_desbloquear: 5,
     velocidad: 10,
     limite_nivel: 5
   },
@@ -51,7 +51,7 @@ var cartas = [
     nombre: "jugador_football_estrella",
     nombre_completo: "Jugador de Football Estrella",
     danio: 20,
-    costo_para_desbloquear: 0,
+    costo_para_desbloquear: 5,
     velocidad: 10,
     limite_nivel: 5
   },
