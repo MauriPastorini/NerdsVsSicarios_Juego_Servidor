@@ -17,6 +17,7 @@ var UsuarioSchema = new Schema({
       nombre_completo: { type: String, required: true },
       velocidad: { type: String, required: true },
       danio: { type: Number, require: true },
+      vida: { type: Number, require: true },
       costo_para_desbloquear: { type: Number, required: true },
       nivel: { type: Number, require: true, default: 1 },
       limite_nivel: { type: Number, require: true },

@@ -6,7 +6,8 @@ var CartaTipo = new Schema({
   nombre: { type: String, required: true },
   nombre_completo: { type: String, required: true },
   velocidad: { type: Number },
-  danio: { type: String },
+  danio: { type: Number },
+  vida: { type: Number },  
   costo_para_desbloquear: { type: Number, required: true },
   limite_nivel: { type: Number, required: true },
 });
