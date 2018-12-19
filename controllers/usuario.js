@@ -172,6 +172,7 @@ exports.cambiarPuntos = async (req, res, next) => {
       msg: "No se setearon los puntos"
     });
   }
+  puntos = parseFloat(puntos);
   if (req.usuario.puntos + puntos >= 0) {
     req.usuario.puntos += puntos;
     try {
