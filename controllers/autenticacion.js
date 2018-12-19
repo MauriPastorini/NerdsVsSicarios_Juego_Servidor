@@ -12,6 +12,7 @@ exports.verificarTokenEInsertarUsuario = async (req, res, next) => {
   var usuarioDecodeado;
   try {
     usuarioDecodeado = await Usuario.verificarToken(token);
+    console.log("Usuario decodeado: ", usuarioDecodeado);
   } catch (err) {
     return res.status(400).jsonp({
       success: false,

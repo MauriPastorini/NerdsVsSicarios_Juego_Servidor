@@ -1,13 +1,13 @@
 var mongoose = require("mongoose"),
   Schema = mongoose.Schema;
 var jwt = require("jsonwebtoken");
-var llaves = require("../config/llaves.json")
+var llaves = require("../config/llaves.json");
 const bcrypt = require("bcrypt-nodejs");
 
 var UsuarioSchema = new Schema({
   nombreusuario: { type: String, required: true, unique: true },
   contrasenia: { type: String },
-  puntos: { type: Number , default: 0},
+  puntos: { type: Number, default: 0 },
   nivel: { type: Number, default: 1 },
   cartas: [
     {
@@ -18,23 +18,25 @@ var UsuarioSchema = new Schema({
       velocidad: { type: String, required: true },
       danio: { type: Number, require: true },
       costo_para_desbloquear: { type: Number, required: true },
-      nivel: { type: Number,require: true, default: 1 },
-      limite_nivel: { type: Number,require: true },
-      aprendida: { type: Boolean, require: true, default: false },
+      nivel: { type: Number, require: true, default: 1 },
+      limite_nivel: { type: Number, require: true },
+      aprendida: { type: Boolean, require: true, default: false }
     }
   ]
 });
 
 UsuarioSchema.pre("save", function(next) {
-  let usuario = this;
-  bcrypt.genSalt(10, function(err, salt) {
-    if (err) return next(err);
-    bcrypt.hash(usuario.contrasenia, salt, null, function(err, hash) {
+  if (this.isNew) {
+    let usuario = this;
+    bcrypt.genSalt(10, function(err, salt) {
       if (err) return next(err);
-      usuario.contrasenia = hash;
-      next();
+      bcrypt.hash(usuario.contrasenia, salt, null, function(err, hash) {
+        if (err) return next(err);
+        usuario.contrasenia = hash;
+      });
     });
-  });
+  }
+  next();
 });
 
 UsuarioSchema.statics.compararContrasenia = function(
