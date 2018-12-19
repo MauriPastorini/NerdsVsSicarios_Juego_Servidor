@@ -182,7 +182,14 @@ const mongoose = require("mongoose");
   mongoose
     .connect(
       dbConfig.connection_string,
-      { useNewUrlParser: true }
+      {
+        useNewUrlParser: true,
+        auth: {
+          authdb: process.env.DB_NAME,
+          user: process.env.USERNAME_DB,
+          password: process.env.PASS_DB
+        }
+      }
     )
     .then(async () => {
       console.log("Conectado con mongodb");
