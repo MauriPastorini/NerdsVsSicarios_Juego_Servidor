@@ -123,6 +123,16 @@ var cartas = [
   },
   {
     tipo: "nerd-it-guy",
+    nombre: "Drone_3_Idle",
+    nombre_completo: "Drone 3.0 Idle",
+    vida: 50,
+    danio: 20,
+    costo_para_desbloquear: 2,
+    velocidad: 10,
+    limite_nivel: 5
+  },
+  {
+    tipo: "nerd-it-guy",
     nombre: "Drone_2_Idle",
     nombre_completo: "Drone 2.0 Idle",
     vida: 50,
