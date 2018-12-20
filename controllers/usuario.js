@@ -122,10 +122,12 @@ exports.subirNivelCartaDeUsuario = async (req, res, next) => {
     const cartaI = usuario.cartas[i];
     if (cartaI._id === carta) {
       console.log("CARTA: ", cartaI);
-      if (usuario.puntos - cartaI.costo_para_desbloquear >= 0) {
+      var costoDesbloquear = cartaI.costo_para_desbloquear * cartaI.nivel;  
+      console.log("Costo desbloquear: ", costoDesbloquear);
+      if (usuario.puntos - costoDesbloquear >= 0) {
         if (cartaI.nivel + 1 <= cartaI.limite_nivel) {
           cartaI.nivel++;
-          usuario.puntos -= cartaI.costo_para_desbloquear;
+          usuario.puntos -= costoDesbloquear;
           cartaI.aprendida = true;
           try {
             await usuario.save();
