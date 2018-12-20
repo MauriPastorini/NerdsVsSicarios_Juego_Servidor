@@ -96,7 +96,7 @@ var cartas = [
     nombre: "jugador_football_base",
     nombre_completo: "Jugador de Football Base",
     vida: 120,
-    danio: 20,
+    danio: 50,
     costo_para_desbloquear: 1,
     velocidad: 10,
     limite_nivel: 5
