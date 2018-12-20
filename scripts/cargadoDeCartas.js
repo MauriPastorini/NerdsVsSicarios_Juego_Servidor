@@ -6,7 +6,7 @@ var cartas = [
     nombre: "dakimakura",
     nombre_completo: "Dakimakura",
     vida: 100,
-    danio: 20,
+    danio: 5,
     costo_para_desbloquear: 3,
     velocidad: 10,
     limite_nivel: 5
@@ -16,7 +16,7 @@ var cartas = [
     nombre: "mochila_pegajosa",
     nombre_completo: "Mochila pegajosa",
     vida: 90,
-    danio: 30,
+    danio: 5,
     costo_para_desbloquear: 2,
     velocidad: 10,
     limite_nivel: 5
@@ -26,7 +26,7 @@ var cartas = [
     nombre: "catapulta",
     nombre_completo: "Catapulta",
     vida: 80,
-    danio: 50,
+    danio: 5,
     costo_para_desbloquear: 1,
     velocidad: 10,
     limite_nivel: 5
@@ -36,7 +36,7 @@ var cartas = [
     nombre: "Drone_3_Idle",
     nombre_completo: "Drone 3.0 Idle",
     vida: 50,
-    danio: 35,
+    danio: 5,
     costo_para_desbloquear: 3,
     velocidad: 10,
     limite_nivel: 5
@@ -46,7 +46,7 @@ var cartas = [
     nombre: "Drone_2_Idle",
     nombre_completo: "Drone 2.0 Idle",
     vida: 95,
-    danio: 30,
+    danio: 5,
     costo_para_desbloquear: 2,
     velocidad: 10,
     limite_nivel: 5
@@ -56,7 +56,7 @@ var cartas = [
     nombre: "drone_idle",
     nombre_completo: "Drone Idle",
     vida: 60,
-    danio: 40,
+    danio: 5,
     costo_para_desbloquear: 1,
     velocidad: 10,
     limite_nivel: 5
@@ -66,7 +66,7 @@ var cartas = [
     nombre: "mochila_cierra",
     nombre_completo: "Mochila cierra",
     vida: 35,
-    danio: 80,
+    danio: 5,
     costo_para_desbloquear: 1,
     velocidad: 10,
     limite_nivel: 5
@@ -76,7 +76,7 @@ var cartas = [
     nombre: "mochila_honda",
     nombre_completo: "Mochila Honda",
     vida: 25,
-    danio: 90,
+    danio: 5,
     costo_para_desbloquear: 3,
     velocidad: 10,
     limite_nivel: 5
@@ -86,7 +86,7 @@ var cartas = [
     nombre: "mochila_mina",
     nombre_completo: "Mochila Mina",
     vida: 1,
-    danio: 100,
+    danio: 5,
     costo_para_desbloquear: 2,
     velocidad: 10,
     limite_nivel: 5
