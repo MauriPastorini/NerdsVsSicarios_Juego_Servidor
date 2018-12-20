@@ -7,7 +7,7 @@ var cartas = [
     nombre_completo: "Dakimakura",
     vida: 100,
     danio: 20,
-    costo_para_desbloquear: 5,
+    costo_para_desbloquear: 3,
     velocidad: 10,
     limite_nivel: 5
   },
@@ -17,7 +17,7 @@ var cartas = [
     nombre_completo: "Mochila pegajosa",
     vida: 90,
     danio: 30,
-    costo_para_desbloquear: 5,
+    costo_para_desbloquear: 2,
     velocidad: 10,
     limite_nivel: 5
   },
@@ -27,97 +27,7 @@ var cartas = [
     nombre_completo: "Catapulta",
     vida: 80,
     danio: 50,
-    costo_para_desbloquear: 5,
-    velocidad: 10,
-    limite_nivel: 5
-  },
-  {
-    tipo: "sicario-jugadorfootball",
-    nombre: "jugador_football_base",
-    nombre_completo: "Jugador de Football Base",
-    vida: 60,
-    danio: 20,
-    costo_para_desbloquear: 5,
-    velocidad: 10,
-    limite_nivel: 5
-  },
-  {
-    tipo: "sicario-jugadorfootball",
-    nombre: "jugador_football_medio",
-    nombre_completo: "Jugador de Football Medio",
-    vida: 85,
-    danio: 35,
-    costo_para_desbloquear: 5,
-    velocidad: 10,
-    limite_nivel: 5
-  },
-  {
-    tipo: "sicario-jugadorfootball",
-    nombre: "jugador_football_estrella",
-    nombre_completo: "Jugador de Football Estrella",
-    vida: 100,
-    danio: 25,
-    costo_para_desbloquear: 5,
-    velocidad: 10,
-    limite_nivel: 5
-  },
-  {
-    tipo: "sicario-bailarin",
-    nombre: "bailarin_base",
-    nombre_completo: "Bailarín Base",
-    vida: 40,
-    danio: 40,
-    costo_para_desbloquear: 5,
-    velocidad: 10,
-    limite_nivel: 5
-  },
-  {
-    tipo: "sicario-bailarin",
-    nombre: "bailarin_medio",
-    nombre_completo: "Bailarín Medio",
-    vida: 55,
-    danio: 55,
-    costo_para_desbloquear: 5,
-    velocidad: 10,
-    limite_nivel: 5
-  },
-  {
-    tipo: "sicario-bailarin",
-    nombre: "bailarin_estrella",
-    nombre_completo: "Bailarín Estrella",
-    vida: 70,
-    danio: 65,
-    costo_para_desbloquear: 5,
-    velocidad: 10,
-    limite_nivel: 5
-  },
-  {
-    tipo: "sicario-punk-girl",
-    nombre: "punk_girl_base",
-    nombre_completo: "Punk Girl Base",
-    vida: 25,
-    danio: 70,
-    costo_para_desbloquear: 5,
-    velocidad: 10,
-    limite_nivel: 5
-  },
-  {
-    tipo: "sicario-punk-girl",
-    nombre: "punk_girl_media",
-    nombre_completo: "Punk Girl Media",
-    vida: 35,
-    danio: 80,
-    costo_para_desbloquear: 5,
-    velocidad: 10,
-    limite_nivel: 5
-  },
-  {
-    tipo: "sicario-punk-girl",
-    nombre: "punk_girl_estrella",
-    nombre_completo: "Punk Girl Estrella",
-    vida: 45,
-    danio: 100,
-    costo_para_desbloquear: 5,
+    costo_para_desbloquear: 1,
     velocidad: 10,
     limite_nivel: 5
   },
@@ -127,7 +37,7 @@ var cartas = [
     nombre_completo: "Drone 3.0 Idle",
     vida: 50,
     danio: 35,
-    costo_para_desbloquear: 5,
+    costo_para_desbloquear: 3,
     velocidad: 10,
     limite_nivel: 5
   },
@@ -137,7 +47,7 @@ var cartas = [
     nombre_completo: "Drone 2.0 Idle",
     vida: 95,
     danio: 30,
-    costo_para_desbloquear: 5,
+    costo_para_desbloquear: 2,
     velocidad: 10,
     limite_nivel: 5
   },
@@ -147,7 +57,7 @@ var cartas = [
     nombre_completo: "Drone Idle",
     vida: 60,
     danio: 40,
-    costo_para_desbloquear: 5,
+    costo_para_desbloquear: 1,
     velocidad: 10,
     limite_nivel: 5
   },
@@ -157,7 +67,7 @@ var cartas = [
     nombre_completo: "Mochila cierra",
     vida: 35,
     danio: 80,
-    costo_para_desbloquear: 5,
+    costo_para_desbloquear: 1,
     velocidad: 10,
     limite_nivel: 5
   },
@@ -167,7 +77,7 @@ var cartas = [
     nombre_completo: "Mochila Honda",
     vida: 25,
     danio: 90,
-    costo_para_desbloquear: 5,
+    costo_para_desbloquear: 3,
     velocidad: 10,
     limite_nivel: 5
   },
@@ -177,10 +87,100 @@ var cartas = [
     nombre_completo: "Mochila Mina",
     vida: 1,
     danio: 100,
-    costo_para_desbloquear: 5,
+    costo_para_desbloquear: 2,
     velocidad: 10,
     limite_nivel: 5
   },
+  {
+    tipo: "sicario-jugadorfootball",
+    nombre: "jugador_football_base",
+    nombre_completo: "Jugador de Football Base",
+    vida: 60,
+    danio: 20,
+    costo_para_desbloquear: 1,
+    velocidad: 10,
+    limite_nivel: 5
+  },
+  {
+    tipo: "sicario-jugadorfootball",
+    nombre: "jugador_football_medio",
+    nombre_completo: "Jugador de Football Medio",
+    vida: 85,
+    danio: 35,
+    costo_para_desbloquear: 2,
+    velocidad: 10,
+    limite_nivel: 5
+  },
+  {
+    tipo: "sicario-jugadorfootball",
+    nombre: "jugador_football_estrella",
+    nombre_completo: "Jugador de Football Estrella",
+    vida: 100,
+    danio: 25,
+    costo_para_desbloquear: 3,
+    velocidad: 10,
+    limite_nivel: 5
+  },
+  {
+    tipo: "sicario-bailarin",
+    nombre: "bailarin_base",
+    nombre_completo: "Bailarín Base",
+    vida: 40,
+    danio: 40,
+    costo_para_desbloquear: 1,
+    velocidad: 10,
+    limite_nivel: 5
+  },
+  {
+    tipo: "sicario-bailarin",
+    nombre: "bailarin_medio",
+    nombre_completo: "Bailarín Medio",
+    vida: 55,
+    danio: 55,
+    costo_para_desbloquear: 2,
+    velocidad: 10,
+    limite_nivel: 5
+  },
+  {
+    tipo: "sicario-bailarin",
+    nombre: "bailarin_estrella",
+    nombre_completo: "Bailarín Estrella",
+    vida: 70,
+    danio: 65,
+    costo_para_desbloquear: 3,
+    velocidad: 10,
+    limite_nivel: 5
+  },
+  {
+    tipo: "sicario-punk-girl",
+    nombre: "punk_girl_base",
+    nombre_completo: "Punk Girl Base",
+    vida: 25,
+    danio: 70,
+    costo_para_desbloquear: 1,
+    velocidad: 10,
+    limite_nivel: 5
+  },
+  {
+    tipo: "sicario-punk-girl",
+    nombre: "punk_girl_media",
+    nombre_completo: "Punk Girl Media",
+    vida: 35,
+    danio: 80,
+    costo_para_desbloquear: 2,
+    velocidad: 10,
+    limite_nivel: 5
+  },
+  {
+    tipo: "sicario-punk-girl",
+    nombre: "punk_girl_estrella",
+    nombre_completo: "Punk Girl Estrella",
+    vida: 45,
+    danio: 100,
+    costo_para_desbloquear: 3,
+    velocidad: 10,
+    limite_nivel: 5
+  }
 ];
 const dbConfig = require("../config/database");
 

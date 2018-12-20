@@ -191,3 +191,14 @@ exports.cambiarPuntos = async (req, res, next) => {
     });
   }
 };
+
+exports.obtenerCartas = async (req, res, next) => {
+  try{
+    var cartas = await CartaTipo.find();
+  }catch(err){
+    return res.status(500).send(err)
+  }
+  return res.status(200).jsonp({
+    cartas
+  });
+}
